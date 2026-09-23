@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Pre-Matrícula y Contacto | Instituto José Cecilio del Valle</title>
+    <meta name="description"
+        content="Reserva tu cupo de pre-matrícula en el Instituto José Cecilio del Valle, Choluteca. Contacto por WhatsApp, redes sociales y ubicación del centro educativo.">
+    <link rel="canonical" href="https://www.ijcv.edu.hn/contacto.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Reserva de Pre-Matrícula y Contacto | Instituto José Cecilio del Valle">
+    <meta property="og:description"
+        content="Llena el formulario para reservar tu solicitud de pre-matrícula para el año académico.">
+    <meta property="og:image" content="img/portada-compartir.jpg">
+    <meta property="og:locale" content="es_HN">
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido</a>
+
+    <div class="top-bar-aniversario">
+        ★ SOMOS CHILO • INSTITUTO JOSÉ CECILIO DEL VALLE • RUMBO AL CENTENARIO ★
+    </div>
+
+    <header class="header">
+        <div class="logo-contenedor">
+            <div class="logo-box">
+                <img src="img/cole2.jpg" alt="Escudo del Instituto José Cecilio del Valle">
+            </div>
+            <div class="logo-texto">
+                <h1>INSTITUTO JOSÉ CECILIO DEL VALLE</h1>
+                <span>Choluteca, Honduras • Fundado en 1930</span>
+            </div>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="navPrincipal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav" id="navPrincipal" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="carreras.html">Carreras</a></li>
+                <li><a href="deportes.html">Deportes</a></li>
+                <li><a href="grupos.html">Grupos</a></li>
+                <li><a href="contacto.html" class="active">Pre-Matrícula</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor seccion" id="contenido-principal">
+        <h2 class="titulo-seccion">Reserva de Cupo y Contacto Directo</h2>
+        <p style="text-align: center; color: var(--texto-suave); margin-top: -25px; margin-bottom: 20px;">Llena el
+            formulario para reservar tu solicitud de pre-matrícula para el año académico.</p>
+
+        <div class="grid-contacto">
+            <!-- FORMULARIO DE MATRÍCULA -->
+            <div class="columna-card">
+                <h3>Formulario de Pre-Matrícula</h3>
+
+                <!--
+                    NOTA PARA QUIEN ADMINISTRE ESTE SITIO:
+                    Este formulario ya NO usa alert() de JavaScript (eso no envía nada a nadie).
+                    Para que las solicitudes lleguen de verdad a un correo, conéctalo a un
+                    servicio gratuito como https://formspree.io :
+                      1. Crea una cuenta gratis en formspree.io
+                      2. Crea un formulario y copia tu endpoint (algo como
+                         https://formspree.io/f/xxxxxxxx)
+                      3. Reemplaza el valor de "action" de abajo por ese endpoint.
+                    El JavaScript al final de la página ya está listo para mostrar un mensaje
+                    de éxito o error sin recargar la página, usando fetch().
+                -->
+                <form id="formMatricula" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre Completo del Estudiante:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Carlos Pérez">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="encargado">Nombre del Padre o Tutor:</label>
+                        <input type="text" id="encargado" name="encargado" required placeholder="Ej. María Pérez">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="telefono">Teléfono / WhatsApp de Contacto:</label>
+                        <input type="tel" id="telefono" name="telefono" required pattern="[0-9+\s\-]{8,15}"
+                            placeholder="+504 9900-0000">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" required placeholder="estudiante@gmail.com">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="carrera">Modalidad / Carrera a Ingresar:</label>
+                        <select id="carrera" name="carrera" required>
+                            <option value="">Seleccione una opción...</option>
+                            <option value="7mo">Educación Básica - 7mo Grado</option>
+                            <option value="8vo">Educación Básica - 8vo Grado</option>
+                            <option value="9no">Educación Básica - 9no Grado</option>
+                            <option value="btp-info">BTP en Informática</option>
+                            <option value="btp-conta">BTP en Contaduría y Finanzas</option>
+                            <option value="btp-salud">BTP en Salud y Nutrición</option>
+                            <option value="btp-enfermeria">BTP en Enfermería</option>
+                            <option value="btp-hoteleria">BTP en Hotelería y Turismo</option>
+                            <option value="humanidades">Bachillerato en Ciencias y Humanidades</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensaje">Comentario o Consulta Adicional:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4"
+                            placeholder="Indique el colegio de procedencia u otra duda..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Solicitud de Pre-Matrícula</button>
+                    <div id="estadoFormulario" class="mensaje-estado" role="status"></div>
+                </form>
+            </div>
+
+            <!-- ENLACES OFICIALES Y REDES SOCIALES -->
+            <div class="columna-card">
+                <h3>Vínculos y Redes Oficiales</h3>
+                <p style="color: var(--texto-suave);">Ponte en contacto directo con las autoridades del instituto a
+                    través de nuestros canales oficiales:</p>
+
+                <div class="info-redes">
+                    <a href="https://whatsapp.com/channel/0029VbBpnzV1yT23EGmpyM33s" target="_blank" rel="noopener"
+                        class="enlace-red">
+                        📱 WhatsApp Oficial: +504 9900-0000
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="enlace-red">
+                        📘 Facebook: /InstitutoJoseCecilioDelValleCholuteca
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="enlace-red">
+                        📸 Instagram: @IJCV_Choluteca
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" class="enlace-red">
+                        🎵 TikTok Oficial: @IJCV.Oficial
+                    </a>
+                    <a href="mailto:info@ijcv.edu.hn" class="enlace-red">
+                        ✉️ Correo Oficial: info@ijcv.edu.hn
+                    </a>
+                </div>
+
+                <h3 style="margin-top: 30px;">Ubicación en Choluteca</h3>
+                <div style="border-radius: 12px; overflow: hidden; margin-top: 10px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.692305886915!2d-87.17922048897003!3d13.300734000000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f703cfecd4b44b1%3A0x7b3d5ebf9fbc56d!2sInstituto%20Jose%20Cecilio%20del%20Valle!5e0!3m2!1ses!2shn!4v1710000000000!5m2!1ses!2shn"
+                        width="100%" height="220" style="border:0; border-radius: 12px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación Instituto José Cecilio del Valle en Choluteca">
+                    </iframe></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="" class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp">💬</a>
+    <button id="btnArriba" class="btn-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer class="footer">
+        <div class="copyright">
+            <p>&copy; 2026 Instituto Departamental José Cecilio del Valle • Choluteca, Honduras.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        // Envío del formulario por fetch (AJAX) en lugar de alert().
+        // Mientras el "action" del formulario siga siendo un endpoint de ejemplo,
+        // mostrará un mensaje de error explicando que falta conectarlo.
+        document.getElementById('formMatricula').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const estado = document.getElementById('estadoFormulario');
+            const boton = form.querySelector('button[type="submit"]');
+            const endpointPlaceholder = form.action.includes('TU_ID_AQUI');
+
+            if (endpointPlaceholder) {
+                estado.className = 'mensaje-estado error';
+                estado.textContent = 'Este formulario aún no está conectado a un servicio de envío real. Configura el endpoint de Formspree (ver comentario en el HTML) para recibir las solicitudes por correo.';
+                return;
+            }
+
+            boton.disabled = true;
+            boton.textContent = 'Enviando...';
+
+            try {
+                const respuesta = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (respuesta.ok) {
+                    estado.className = 'mensaje-estado exito';
+                    estado.textContent = '¡Solicitud de Pre-Matrícula recibida exitosamente! Nos pondremos en contacto pronto.';
+                    form.reset();
+                } else {
+                    estado.className = 'mensaje-estado error';
+                    estado.textContent = 'No se pudo enviar la solicitud. Intenta de nuevo o contáctanos por WhatsApp.';
+                }
+            } catch (error) {
+                estado.className = 'mensaje-estado error';
+                estado.textContent = 'Error de conexión. Verifica tu internet o contáctanos por WhatsApp.';
+            } finally {
+                boton.disabled = false;
+                boton.textContent = 'Enviar Solicitud de Pre-Matrícula';
+            }
+        });
+    </script>
+</body>
+
+</html>

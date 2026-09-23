@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educación Básica | Instituto José Cecilio del Valle</title>
+    <meta name="description"
+        content="Plan de estudios del III Ciclo de Educación Básica (7mo, 8vo y 9no grado) del Instituto José Cecilio del Valle de Choluteca.">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+    <style>
+           @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+        :root {
+            /* PALETA OFICIAL — caqui / azul marino / rojo institucional */
+            --caqui-colegio: #CFA872;
+            --caqui-oscuro: #B58C54;
+            --caqui-suave: #F8F3EC;
+            --azul-marino: #0B1B3D;
+            --azul-marino-oscuro: #050D1E;
+            --rojo-chilo: #D31219;
+            --rojo-hover: #9E0B10;
+            --blanco-puro: #FFFFFF;
+            --texto-principal: #0B1B3D;
+            --texto-suave: #475569;
+            --fondo-pagina: #B58C54;
+            --fondo-tarjeta: #FFFFFF;
+            --fondo-footer: #050D1E;
+            --borde-suave: #E5D5C2;
+
+            --sombra-elegante: 0 12px 30px -5px rgba(11, 27, 61, 0.08);
+            --sombra-hover: 0 20px 35px -8px rgba(207, 168, 114, 0.4);
+            --fuente-titulo: 'Outfit', sans-serif;
+            --fuente-cuerpo: 'Plus Jakarta Sans', sans-serif;
+            --transicion: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--fondo-pagina);
+            color: var(--texto-principal);
+            font-family: var(--fuente-cuerpo);
+            line-height: 1.6;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .seccion {
+            padding: 70px 0;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Salto de foco visible por accesibilidad */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible,
+        select:focus-visible {
+            outline: 3px solid var(--rojo-chilo);
+            outline-offset: 2px;
+        }
+
+        /* Enlace "saltar al contenido" para accesibilidad de teclado */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--azul-marino);
+            color: #fff;
+            padding: 12px 20px;
+            z-index: 10001;
+            border-radius: 0 0 8px 0;
+        }
+
+        .skip-link:focus {
+            left: 0;
+        }
+
+        /* ===== FRANJA SUPERIOR DE ANIVERSARIO ===== */
+        .top-bar-aniversario {
+            background: linear-gradient(90deg, var(--azul-marino) 0%, var(--rojo-chilo) 45%, var(--caqui-oscuro) 100%);
+            color: #ffffff;
+            font-family: var(--fuente-titulo);
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-align: center;
+            padding: 7px 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ===== HEADER Y NAVEGACIÓN ===== */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(14px);
+            border-bottom: 4px solid var(--caqui-colegio);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            flex-wrap: wrap;
+        }
+
+        .logo-contenedor {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--blanco-puro);
+            border: 3px solid var(--caqui-colegio);
+            box-shadow: 0 2px 8px rgba(207, 168, 114, 0.35);
+            flex-shrink: 0;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-texto h1 {
+            font-family: var(--fuente-titulo);
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--azul-marino);
+            line-height: 1.15;
+        }
+
+        .logo-texto span {
+            font-size: 0.78rem;
+            color: var(--caqui-oscuro);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav {
+            margin-left: auto;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: var(--texto-suave);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: var(--transicion);
+            white-space: nowrap;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            color: #ffffff;
+            background-color: var(--azul-marino);
+            box-shadow: 0 4px 12px rgba(11, 27, 61, 0.2);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 2px solid var(--caqui-colegio);
+            border-radius: 8px;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            padding: 8px;
+            margin-left: auto;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: var(--azul-marino);
+            margin: 5px 0;
+            border-radius: 2px;
+        }
+
+        /* ===== BANNER DE ENCABEZADO (páginas internas) ===== */
+        .banner-encabezado {
+            background: linear-gradient(135deg, var(--azul-marino-oscuro) 0%, var(--azul-marino) 50%, var(--caqui-oscuro) 100%);
+            color: white;
+            padding: 70px 24px;
+            text-align: center;
+            border-bottom: 5px solid var(--caqui-colegio);
+        }
+
+        .banner-encabezado h2 {
+            font-family: var(--fuente-titulo);
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .banner-encabezado p {
+            font-size: 1.1rem;
+            color: var(--caqui-suave);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== CONTENIDO TARJETA Y DETALLES DE CARRERA ===== */
+        .contenido-tarjeta-principal {
+            background: var(--blanco-puro);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--sombra-elegante);
+            border: 1px solid var(--borde-suave);
+            position: relative;
+        }
+
+        .contenido-tarjeta-principal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--caqui-colegio), var(--azul-marino), var(--rojo-chilo));
+            border-radius: 20px 20px 0 0;
+        }
+
+        .titulo-carrera {
+            font-family: var(--fuente-titulo);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--azul-marino);
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--caqui-colegio);
+        }
+
+        .galeria-carrera {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .galeria-carrera img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--sombra-elegante);
+            border: 2px solid var(--caqui-suave);
+            cursor: pointer;
+            transition: var(--transicion);
+        }
+
+        .galeria-carrera img:hover {
+            transform: scale(1.05);
+            border-color: var(--caqui-colegio);
+            box-shadow: var(--sombra-hover);
+        }
+
+        details {
+            background: var(--blanco-puro);
+            border: 1px solid var(--borde-suave);
+            padding: 18px 22px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: var(--transicion);
+        }
+
+        details[open] {
+            border-color: var(--caqui-colegio);
+            box-shadow: var(--sombra-elegante);
+        }
+
+        summary {
+            font-weight: 800;
+            font-family: var(--fuente-titulo);
+            font-size: 1.15rem;
+            color: var(--azul-marino);
+            outline: none;
+        }
+
+        .lista-clases {
+            margin-top: 15px;
+            padding-left: 25px;
+            color: var(--texto-suave);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .lista-clases li {
+            list-style-type: disc;
+            font-weight: 500;
+        }
+
+        .menu-carreras-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .btn-otra-carrera {
+            background: var(--caqui-suave);
+            border: 1.5px solid var(--borde-suave);
+            color: var(--azul-marino);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: var(--fuente-titulo);
+            transition: var(--transicion);
+            text-decoration: none;
+        }
+
+        .btn-otra-carrera:hover,
+        .btn-otra-carrera.active {
+            background: var(--azul-marino);
+            color: var(--blanco-puro);
+            border-color: var(--azul-marino);
+            box-shadow: 0 4px 12px rgba(11, 27, 61, 0.25);
+        }
+
+        /* ===== MODAL LIGHTBOX ===== */
+        .modal-lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(5, 13, 30, 0.95);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 16px;
+            border: 3px solid var(--caqui-colegio);
+        }
+
+        .cerrar-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: var(--caqui-colegio);
+            font-size: 45px;
+            cursor: pointer;
+            font-weight: bold;
+            background: none;
+            border: none;
+        }
+
+        /* ===== BOTONES FLOTANTES ===== */
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            text-decoration: none;
+            transition: var(--transicion);
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-arriba {
+            position: fixed;
+            bottom: 95px;
+            right: 25px;
+            background-color: var(--azul-marino);
+            color: white;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            text-decoration: none;
+            transition: var(--transicion);
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .btn-arriba.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .btn-arriba:hover {
+            transform: scale(1.1);
+            background-color: var(--caqui-oscuro);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ===== FOOTER INSTITUCIONAL ===== */
+        .footer {
+            background-color: var(--fondo-footer);
+            color: #94A3B8;
+            padding-top: 60px;
+            border-top: 5px solid var(--caqui-colegio);
+        }
+
+        .footer-contenido {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-family: var(--fuente-titulo);
+            color: var(--blanco-puro);
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            display: block;
+            width: 35px;
+            height: 3px;
+            background: var(--caqui-colegio);
+            margin-top: 6px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: var(--transicion);
+        }
+
+        .footer-col a:hover {
+            color: var(--caqui-colegio);
+            padding-left: 4px;
+        }
+
+        .footer-col p {
+            margin-bottom: 8px;
+        }
+
+        .redes-sociales {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .redes-sociales a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border: 1px solid rgba(207, 168, 114, 0.4);
+            transition: var(--transicion);
+        }
+
+        .redes-sociales a:hover {
+            background: var(--caqui-colegio);
+            color: var(--azul-marino-oscuro);
+            border-color: var(--caqui-colegio);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 24px;
+            background-color: #020610;
+            font-size: 0.85rem;
+            border-top: 1px solid #1E293B;
+            color: #64748B;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+            }
+
+            .nav.abierto,
+            .nav.active {
+                max-height: 400px;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                padding-top: 15px;
+                gap: 8px;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .banner-encabezado h2 {
+                font-size: 2rem;
+            }
+
+            .logo-texto h1 {
+                font-size: 1.05rem;
+            }
+
+            .contenido-tarjeta-principal {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido</a>
+
+    <div class="top-bar-aniversario">
+        ★ SOMOS CHILO • INSTITUTO JOSÉ CECILIO DEL VALLE • RUMBO AL CENTENARIO ★
+    </div>
+
+    <header class="header">
+        <div class="logo-contenedor">
+            <div class="logo-box">
+                <img src="img/cole2.jpg" alt="Escudo del Instituto José Cecilio del Valle">
+            </div>
+            <div class="logo-texto">
+                <h1>INSTITUTO JOSÉ CECILIO DEL VALLE</h1>
+                <span>Choluteca, Honduras • Fundado en 1930</span>
+            </div>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="navPrincipal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav" id="navPrincipal" aria-label="Navegación principal">
+            <ul>
+               <li><a href="carreras.html" class="active">INICIO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-encabezado">
+        <h2>Educación Básica</h2>
+        <p>Plan de Estudios del Tercer Ciclo de Educación Básica (7mo, 8vo y 9no Grado)</p>
+    </section>
+
+    <main class="contenedor seccion" id="contenido-principal">
+        <section id="basica">
+            <h2 class="titulo-carrera">Educación Básica (7mo, 8vo y 9no Grado)</h2>
+            <p style="color: var(--texto-suave);">El Tercer Ciclo de Educación Básica sienta las bases científicas,
+                metodológicas y técnicas de nuestros jóvenes, preparándolos para la formación diversificada.</p>
+
+            <div class="galeria-carrera">
+                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80"
+                    alt="Alumnos en Clase" loading="lazy" onclick="abrirLightbox(this.src)">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80"
+                    alt="Biblioteca Básica" loading="lazy" onclick="abrirLightbox(this.src)">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80"
+                    alt="Taller de Informática Básica" loading="lazy" onclick="abrirLightbox(this.src)">
+            </div>
+
+            <details open>
+                <summary>Séptimo Grado (7mo) - Asignaturas Impartidas</summary>
+                <ul class="lista-clases">
+                    <li>Español / Lengua y Literatura</li>
+                    <li>Matemáticas I</li>
+                    <li>Ciencias Naturales</li>
+                    <li>Ciencias Sociales</li>
+                    <li>Inglés Técnico I</li>
+                    <li>Educación Física y Deportes</li>
+                    <li>Educación Artística</li>
+                    <li>Tecnología e Informática</li>
+                    <li>Talleres de Orientación Técnica</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Octavo Grado (8vo) - Asignaturas Impartidas</summary>
+                <ul class="lista-clases">
+                    <li>Español II</li>
+                    <li>Matemáticas II</li>
+                    <li>Ciencias Naturales II</li>
+                    <li>Ciencias Sociales II</li>
+                    <li>Inglés Técnico II</li>
+                    <li>Educación Física II</li>
+                    <li>Educación Cívica y Ética</li>
+                    <li>Tecnología Básica II</li>
+                    <li>Socio-Productiva</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Noveno Grado (9no) - Asignaturas Impartidas</summary>
+                <ul class="lista-clases">
+                    <li>Español III</li>
+                    <li>Matemáticas III</li>
+                    <li>Ciencias Naturales III</li>
+                    <li>Ciencias Sociales III</li>
+                    <li>Inglés Técnico III</li>
+                    <li>Educación Física III</li>
+                    <li>Fundamentos de Informática</li>
+                    <li>Orientación Vocacional</li>
+                </ul>
+            </details>
+        </section>
+
+        <!-- Navegación entre Carreras -->
+        <div style="margin-top: 50px; text-align: center;">
+            <h3 style="font-family: var(--fuente-titulo); color: var(--azul-marino);">Explora otras Ofertas Académicas
+            </h3>
+            <div class="menu-carreras-nav">
+                <a href="educacion_basica.html" class="btn-otra-carrera active">Ed. Básica</a>
+                <a href="BTP-INFORMÁTICA.HTML" class="btn-otra-carrera">BTP Informática</a>
+                <a href="BTP-CONTADURÍA-Y-FINANZAS.HTML" class="btn-otra-carrera">BTP Contaduría</a>
+                <a href="BTP_salud_nutricion.HTML" class="btn-otra-carrera">BTP Salud y Nutrición</a>
+                <a href="BTP-ENFERMERIA.HTML" class="btn-otra-carrera">BTP Enfermería</a>
+                <a href="BTP-HT.HTML" class="btn-otra-carrera">BTP Hotelería y Turismo</a>
+                <a href="BCH-HUMANIDADES.HTML" class="btn-otra-carrera">BCH Humanidades</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="lightboxModal" class="modal-lightbox" onclick="cerrarLightbox()">
+        <button class="cerrar-modal" aria-label="Cerrar imagen">&times;</button>
+        <img id="imagenAmpliada" src="" alt="Imagen ampliada">
+    </div>
+
+    <a href="https://wa.me/50499000000?text=Hola,%20deseo%20más%20información%20sobre%20Educación%20Básica"
+        class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp">💬</a>
+    <button id="btnArriba" class="btn-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <div class="footer-col" style="max-width: 380px;">
+                <h4>Instituto José Cecilio del Valle</h4>
+                <p>Formación técnica y profesional para el desarrollo de Choluteca.</p>
+                <div class="redes-sociales">
+                    <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Oferta Académica</h4>
+                <ul>
+                    <li><a href="educacion_basica.html">Educación Básica</a></li>
+                    <li><a href="BTP-INFORMÁTICA.HTML">BTP Informática</a></li>
+                    <li><a href="BTP-CONTADURÍA-Y-FINANZAS.HTML">BTP Contaduría y Finanzas</a></li>
+                    <li><a href="BTP_salud_nutricion.HTML">BTP Salud y Nutrición</a></li>
+                    <li><a href="BTP-ENFERMERIA.HTML">BTP Enfermería</a></li>
+                    <li><a href="BTP-HT.HTML">BTP Hotelería y Turismo</a></li>
+                    <li><a href="BCH-HUMANIDADES.HTML">BCH Humanidades</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto Directo</h4>
+                <p>📍 Barrio El Centro, Choluteca, Honduras</p>
+                <p>📞 +504 2782-0000 / +504 2782-0101</p>
+                <p>✉️ <a href="mailto:info@ijcv.edu.hn">info@ijcv.edu.hn</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Instituto Departamental José Cecilio del Valle. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Menú Móvil
+        const navToggle = document.getElementById('navToggle');
+        const navPrincipal = document.getElementById('navPrincipal');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+                navToggle.setAttribute('aria-expanded', !expanded);
+                navPrincipal.classList.toggle('active');
+            });
+        }
+
+        // Lightbox de imágenes
+        function abrirLightbox(src) {
+            document.getElementById('imagenAmpliada').src = src;
+            document.getElementById('lightboxModal').style.display = 'flex';
+        }
+        function cerrarLightbox() {
+            document.getElementById('lightboxModal').style.display = 'none';
+        }
+
+        // Botón Volver Arriba
+        const btnArriba = document.getElementById('btnArriba');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btnArriba.style.display = 'flex';
+            } else {
+                btnArriba.style.display = 'none';
+            }
+        });
+        btnArriba.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
